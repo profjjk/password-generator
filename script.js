@@ -17,15 +17,17 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // CREATE VARIABLES:
-  // password;
-  // 
+  // passwordRandom;
+  // passwordOrdered;
 
 // CREATE ARRAYS:
   // PREPARED LISTS:
     // Create separate arrays like below, or put everything in one mixed array.
     // numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    // alphabetLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    // alphabetUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     // specialChar = ["!", "#", "$", "%", "&"];
+    allCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "!", "#", "$", "%", "&"];
   // GENERATED LISTS:
     // A list to receive selected numbers, letters, and special characters that will make up the new password.
       // passwordCharacters = [];
@@ -33,7 +35,9 @@ generateBtn.addEventListener("click", writePassword);
       //passwordScrambled = [];
 
 // CREATE FUNCTIONS:
-  // 
+  // Randomize array
+  // Convert letter strings to uppercase
+
 
 
 
@@ -58,4 +62,25 @@ function getRandomNumber() {
     listName[randomNum] = listItem;
     // Step 7: Repeat until all list items have new index positions.
   }
-  console.log(listName);
+
+// This function takes an existing list and copies its variables into a new list in random order. Much of the logic found in this function is inspired by the Fisher Yates Method as discovered on w3schools.com.
+function scrambleList(listName) {
+  // Step 1: Declare a new, temporary list to hold the scrambled variables.
+  var newList = [];
+  // Step 2: Create a for loop that runs as many iterations as there are items in the list.
+  for (i = listName.length -1; i > 0; i--) {
+    // Step 3: Generate a random number within the confines of the list's length. Store that number in a temporary variable (randomNum).
+    randomNum = Math.floor(Math.random() * i);
+    // Step 4: Use random number from Step 3 to pluck out a random item from the existing list.
+    listItem = listName[randomNum];
+    // Step 5: Push the item determined in Step 4 to the new list.
+    newList.push(listItem);
+    // Step 6: Repeat until all items from the existing list have been copied over to the new list in their new index positions.
+  }
+  // Return the new, scrambled list to the variable that called the function.
+  return newList;
+} 
+
+
+var passwordNew = scrambleList(allCharacters);
+console.log(passwordNew);
