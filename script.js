@@ -59,23 +59,17 @@ function getPassword() {
   }
 }
 
-// RUN FUNCTIONS
-getLength();
-getComposition();
-getPassword();
-
-//////////
-
 // ASSIGNMENT CODE
 var generateBtn = document.querySelector("#generate");
 
-// WRITE PASSWORD TO #PASSWORD INPUT
+// EXECUTE FUNCTIONS AND WRITE PASSWORD TO #PASSWORD INPUT
 function writePassword() {
   var passwordText = document.querySelector("#password");
+  getLength();
+  getComposition();
+  getPassword();
   passwordText.value = password;
 }
 
 // ADD EVENT LISTENER TO GENERATE BUTTON
 generateBtn.addEventListener("click", writePassword);
-
-///////////
