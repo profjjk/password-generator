@@ -56,3 +56,10 @@ function getComposition() {
       passwordComp = passwordComp.concat(specChar);
   }
 }
+
+// Create loop to choose password characters.
+function getPassword() {
+  for (var i = 0; i <= passwordLength; i++) {
+  password += passwordComp[Math.floor(Math.random() * passwordComp.length)];
+  }
+}
