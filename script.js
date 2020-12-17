@@ -36,3 +36,23 @@ function getLength() {
       passwordLength = inputLength;
   }
 }
+
+// Ask user what characters to include in password composition.
+function getComposition() {
+  var lowerInput = confirm("Would you like to include lowercase letters?");
+  if (lowerInput === true) {
+      passwordComp = passwordComp.concat(alphaLower);
+  }
+  var upperInput = confirm("Would you like to include uppercase letters?");
+  if (upperInput === true) {
+      passwordComp = passwordComp.concat(alphaUpper);
+  }
+  var numberInput = confirm("Would you like to include numbers?");
+  if (numberInput === true) {
+      passwordComp = passwordComp.concat(numbers);
+  }
+  var characterInput = confirm("Would you like to include special characters?");
+  if (characterInput === true) {
+      passwordComp = passwordComp.concat(specChar);
+  }
+}
