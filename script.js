@@ -25,3 +25,14 @@ var specChar = ["!", "#", "$", "%", "&", "?", "/", "@", "*", "(", ")", "<", ">"]
 var passwordComp = [];
 var passwordLength = 0;
 var password = "";
+
+
+// Ask user to select password length between 8 - 128 characters.
+function getLength() {
+  var inputLength = prompt("How many characters would you like your password to be? (Choose between 8 - 128.)");
+  if (inputLength < 8 || inputLength > 128) {
+      alert("You must enter a number between 8 and 128");
+  } else {
+      passwordLength = inputLength;
+  }
+}
