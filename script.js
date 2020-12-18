@@ -82,13 +82,3 @@ function writePassword() {
 
 // ADD EVENT LISTENER TO GENERATE BUTTON
 generateBtn.addEventListener("click", writePassword);
-
-
-/////// PROBLEMS ///////
-
-// 1 - Smaller passwords are not guaranteed to include all selected character types.
-
-
-
-/////// DRAFT CODE ///////
-
