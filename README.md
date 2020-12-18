@@ -10,7 +10,7 @@
 ---
 
 ## Project Summary
-This password generator accepts input from the user in terms of how long they want the password to be and what kind of characters they would like to include in the composition. It the creates a randomized password for the user.
+This password generator accepts input from the user in terms of how long they want the password to be and what kind of characters they would like to include in the composition. It then creates a randomized password for the user.
 
 ## Technologies Used
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
