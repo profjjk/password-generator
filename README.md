@@ -18,7 +18,7 @@ This password generator accepts input from the user in terms of how long they wa
 * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 
 ## Example Code
-Function prompts for password length...
+Function prompts for password length ...
 ```
 function getLength() {
   var inputLength = prompt("How many characters would you like your password to be? (Choose between 8 - 128.)");
@@ -59,7 +59,7 @@ if (lengthCheck === false || compCheck === false) {
 ```
 
 ## How to Access
-[Jordan's Responsive Portfolio Website](https://profjjk.github.io/responsive-portfolio/)
+[Password Generator](https://profjjk.github.io/password-generator/)
 
 ## About Me
 * [LinkedIn](www.linkedin.com/in/the-real-jordan-kelly)
